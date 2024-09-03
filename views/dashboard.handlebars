@@ -1,0 +1,20 @@
+<body>
+  {{#if posts.length}}
+  {{#each posts as |post| }}
+  <div class="row mb-4 post post-list">
+    <div class="col-md-5">
+      <h2>{{post.title}}</h2>
+      <p>{{post.content}}</p>
+      <a href="/dashboard/edit/{{post.id}}" class="btn btn-primary">Edit</a>
+      <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+    </div>
+  </div>
+  {{/each}}
+{{else}}
+  <p>No posts yet!</p>
+{{/if}}
+<div>
+<a href="/dashboard/new" class="btn btn-primary">Create New Post</a>
+</div>
+<script src="/js/dashboard.js"></script>
+</body>

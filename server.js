@@ -19,7 +19,7 @@ const sess = {
         maxAge: 300000,
         httpOnly: true,
         secure: false,
-        sameSize: 'strict',
+        sameSite: 'strict',
     },
     resave: false,
     saveUninitialized: true,
@@ -30,7 +30,7 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlbars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
