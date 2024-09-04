@@ -1,15 +1,18 @@
 <body>
+  <h2>Posts</h2>
   {{#if posts.length}}
   {{#each posts as |post| }}
   <div class="row mb-4 post">
-    <div class="col-md-5">
+    <div class="col-md-12">
+         <div class="post-header">
       <h2>
         <a href="/post/{{post.id}}">{{post.title}}</a>
       </h2>
-      <p>
+      <p class="posted-by">
         Posted by {{post.user.username}} on {{format_date post.createdAt}}
       </p>
-      <p>{{post.content}}</p>
+         </div>
+      <p class="post-content">{{post.content}}</p>
     </div>
   </div>
   {{/each}}
