@@ -63,22 +63,18 @@ const editPostHandler = async (event) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('.new-post-form');
-        if (form) {
-            form.addEventListener('submit', newFormHandler);
-        }
-    });
+    const newPostForm = document.querySelector('.new-post-form');
+    if (newPostForm) {
+        newPostForm.addEventListener('submit', newFormHandler);
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('.edit-post-form');
-        if (form) {
-            form.addEventListener('submit', editPostHandler);
-        }
-    });
-document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('.post-list');
-        if (form) {
-            form.addEventListener('click', delButtonHandler);
-        }
-    });
-    
+    const editPostForm = document.querySelector('.edit-post-form');
+    if (editPostForm) {
+        editPostForm.addEventListener('submit', editPostHandler);
+    }
+
+    const delButton = document.querySelector('#delete-button');
+    if (delButton) {
+        delButton.addEventListener('click', delButtonHandler);
+    }
+});
