@@ -2,6 +2,8 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+## Link to Deployed Application
+https://tech-blog-ikrx.onrender.com/
 
 ## Description
 My motivation for the project was to build a full stack application
